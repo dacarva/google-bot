@@ -22,4 +22,12 @@ while True:
     element = browser.find_element_by_partial_link_text('trugroup')
     element.click()
     print('Element', element)
-    sleep(10)
+    sleep(5)
+
+    try:
+        team = browser.find_element_by_partial_link_text('Equipo')
+        team.click()
+    except:
+        print('Element not found')
+    finally:
+        sleep(5)
